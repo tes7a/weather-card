@@ -1,0 +1,108 @@
+@import "src/common/mixins/mixins";
+
+.modal {
+  display: flex;
+
+  height: 100%;
+  width: 100%;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  overflow: auto;
+
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .modal__content {
+    width: 600px;
+    height: 800px;
+    position: relative;
+
+    padding: 20px 20px;
+    margin: auto;
+
+    border-radius: 6px;
+
+    background-color: #ecece7;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+    @media screen and (max-width: 385px) {
+      width: 100%;
+    }
+
+    .modal__title {
+      margin-bottom: 5px;
+      padding-bottom: 6px;
+
+      border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+      @include textStyle(400, 40px, 48px, -0.02em, #000000)
+    }
+
+    .modal__list {
+      margin: 6px;
+      list-style: disc;
+
+      border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+      @include textStyle(200, 17px, 25px, -0.02em, #000000);
+
+      li {
+        list-style: disc;
+      }
+    }
+
+    .modal__description_block {
+      display: flex;
+      justify-content: space-between;
+      margin: 6px;
+
+      .modal__description {
+        margin-top: 5px;
+        @include textStyle(200, 19px, 30px, -0.02em, #000000);
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .modal__btn {
+      position: absolute;
+      left: -4px;
+      bottom: -3px;
+    }
+
+    .modal__hourly_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      height: 150px;
+      border-left: 1px solid rgb(0, 0, 0, 0.2);
+      border-right: 1px solid rgb(0, 0, 0, 0.2);
+
+      .modal__hourly_temp {
+        display: inline-block;
+        height: 26px;
+        width: 55px;
+
+        margin: 0 2px;
+        padding-top: 1px;
+        padding-left: 3px;
+
+        background-color: #aab7c9;
+        border-radius: 4px;
+
+        @include textStyle(200, 17px, 25px, -0.02em, #000000);
+
+        .modal__hourly_time {
+          padding-top: 5px;
+          @include textStyle(200, 14px, 25px, -0.02em, #000000);
+        }
+      }
+    }
+  }
+}

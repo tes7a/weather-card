@@ -1,0 +1,15 @@
+@import "/src/common/reset-styles";
+
+body {
+  height: 100vh;
+  background: url("https://c.wallhere.com/photos/94/2a/monochrome_black_clouds_mountains_sky_white-79903.jpg!d");
+
+  background-attachment: fixed;
+  background-position: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  font-family: Roboto, sans-serif;
+}
+

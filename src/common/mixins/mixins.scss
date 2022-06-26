@@ -1,0 +1,10 @@
+@mixin textStyle($fw,$fsi,$lh,$ls,$c) {
+  font-style: normal;
+  font-weight: $fw;
+  font-size: $fsi;
+  line-height: $lh;
+
+  letter-spacing: $ls;
+
+  color: $c;
+}

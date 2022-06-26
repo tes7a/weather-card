@@ -1,0 +1,42 @@
+@import "src/common/mixins/mixins";
+
+.card {
+  height: 100%;
+  width: 300px;
+  padding: 5px 15px 10px;
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  .card__title {
+    margin-bottom: 5px;
+    @include textStyle(400, 40px, 48px, -0.02em, #000000)
+  }
+
+  .card__temp {
+    display: inline-block;
+    margin-bottom: 5px;
+    @include textStyle(300, 25px, 30px, -0.02em, #000000)
+  }
+
+  .card__description_block {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+
+    .card__description {
+      @include textStyle(200, 19px, 30px, -0.02em, #000000);
+
+      &::first-letter {
+        text-transform: uppercase;
+    }
+    }
+  }
+
+  .card__btn_group {
+    display: flex;
+    justify-content: space-between;
+
+    .card__btn {
+    }
+  }
+}
