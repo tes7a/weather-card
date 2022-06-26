@@ -10,8 +10,6 @@ import {GetWeatherType} from "../api/api-weather";
 import {Modal} from "../components/modal/Modal";
 import userEvent from "@testing-library/user-event";
 
-jest.mock("axios")
-
 describe("WeatherCard", () => {
 
     const weatherCardsArr: GetWeatherType[] = [{
